@@ -1,0 +1,27 @@
+.economyAdd {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    border: solid 2px #aaa;
+    top: 200px;
+    left: 40%;
+}
+
+.userColumns {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    border: solid 2px #aaa;
+    top: 200px;
+    left: 40%;
+}

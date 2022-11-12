@@ -1,0 +1,106 @@
+.table {
+    --cellWidth: 100px;
+    --cellHeight: 20px;
+    width: 1000px;
+    height: 700px;
+
+    border: solid 3px #959;
+    overflow: hidden;
+}
+
+.tableHeaderStyles {
+    display: flex;
+}
+
+.tableFooterStyles {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* .tableFixedXY {
+
+} */
+
+.tableFixedY {
+    overflow: hidden;
+    scrollbar-width: 0;
+}
+
+.tableFixedY::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tableFixedX {
+    width: calc(var(--cellWidth) * var(--fixedColumns));
+    overflow: hidden;
+    scrollbar-width: 0;
+}
+
+.tableFixedX::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tableFlexable {
+    width: calc(100% - var(--cellWidth) * var(--fixedColumns));
+    overflow: scroll;
+    scrollbar-width: 0;
+}
+
+.tableFlexable::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.row {
+    display: flex;
+    width: min-content;
+    height: min-content;
+}
+
+.celll {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: calc(var(--cellWidth) - 2px);
+    height: calc(var(--cellHeight) - 2px);
+    border: solid 1px #888;
+    cursor: default;
+    transition: 
+        background-color 0.2s ease-in-out;
+}
+
+/* .columnHover {
+    background-color: #955;
+    transition: 
+        background-color 0.1s ease;
+}
+
+.rowHover {
+    background-color: #595;
+    transition: 
+        background-color 0.1s ease;
+} */
+
+.celll:hover, input:hover {
+    background-color: #ddd;
+    transition: 
+        background-color 0.2s ease-in-out;
+}
+
+input {
+    background-color: inherit;
+    transition: inherit;
+}
+
+input:focus-visible {
+    background-color: #959;
+}
+
+.celll[id*='r0'] {
+    --cellHeight: 80px;
+}

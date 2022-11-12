@@ -1,0 +1,131 @@
+.graphicpage {
+    width: 100%;
+}
+
+.graph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1580px;
+}
+
+.tableWrapper {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 64px;
+    gap: calc(var(--cellWidth) / 20);
+}
+
+.right {
+    margin-right: 64px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    --cellWidth: calc(100vw / 8 - 2px);
+}
+
+.table * {
+    font-size: 0.95em;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.row {
+    display: flex;
+    width: max-content;
+    height: max-content;
+}
+
+.cell {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: var(--cellWidth);
+    height: 52px;
+    border: solid 1px #7c7c7c;
+}
+
+.cellHeader {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: var(--cellWidth);
+    height: 52px;
+    border: solid 1px #7c7c7c;
+}
+
+.cellFirstLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cellWidth);
+    height: 20px;
+    border: solid 1px #7c7c7c;
+}
+
+.settingsTables {
+    display: flex;
+    width: max-content;
+    margin-right: var(--cellWidth);
+}
+
+/* .cellFirstLine:first-child {
+    width: 25px;
+}
+
+.cellHeader:first-child {
+    width: 23px;
+}
+
+.cell:first-child {
+    width: 25px;
+} */
+
+input {
+    width: 100%;
+    height: calc(100% - 2px);
+    text-align: center;
+    overflow: hidden;
+    resize: none;
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #000;
+}
+
+input:-moz-placeholder {
+    color: #000;
+}
+
+input::-moz-placeholder {
+    color: #000;
+}
+
+input:focus-visible {
+    outline: none;
+    background-color: #e7e7e7;
+}
+
+.selection {
+    width: 100%;
+    height: 100%;
+}
+
+.glassofwater {
+    margin-right: 200px;
+    width: 250px;
+    height: 300px;
+}

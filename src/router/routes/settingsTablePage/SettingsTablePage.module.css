@@ -1,0 +1,95 @@
+:root {
+    --cellWidth: 200px
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+}
+
+.table * {
+    font-size: 0.95em;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.row {
+    display: flex;
+    width: max-content;
+    height: max-content;
+}
+
+.cell {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: var(--cellWidth);
+    height: 52px;
+    border: solid 1px #7c7c7c;
+}
+
+.cellHeader {
+    padding: 1px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: calc(var(--cellWidth) - 2px);
+    height: 50px;
+    border: solid 1px #7c7c7c;
+}
+
+.cellFirstLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cellWidth);
+    height: 20px;
+    border: solid 1px #7c7c7c;
+}
+
+.settingsTables {
+    display: flex;
+    width: max-content;
+    margin-right: var(--cellWidth);
+}
+
+/* .cellFirstLine:first-child {
+    width: 25px;
+}
+
+.cellHeader:first-child {
+    width: 23px;
+}
+
+.cell:first-child {
+    width: 25px;
+} */
+
+input {
+    width: 100%;
+    height: calc(100% - 2px);
+    text-align: center;
+    overflow: hidden;
+    resize: none;
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #000;
+}
+
+input:-moz-placeholder {
+    color: #000;
+}
+
+input::-moz-placeholder {
+    color: #000;
+}
+
+input:focus-visible {
+    outline: none;
+    background-color: #e7e7e7;
+}

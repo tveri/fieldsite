@@ -1,0 +1,139 @@
+.page {
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+
+.table {
+    --cellWidth: 70px;
+    --cellHeight: 20px;
+    --fixedXWidth: calc(var(--cellWidth) * 7 + 40px + 80px);
+    width: 100vw;
+    height: calc(100vh - var(--navBarHeight));
+
+    overflow: hidden;
+}
+
+.tableHeaderStyles {
+    display: flex;
+    font-size: 0.9em;
+}
+
+.tableFooterStyles {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* .tableFixedXY {
+
+} */
+
+.tableFixedY {
+    overflow: hidden;
+    scrollbar-width: 0;
+}
+
+.tableFixedY::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tableFixedX {
+    width: var(--fixedXWidth);
+    overflow: hidden;
+    scrollbar-width: 0;
+}
+
+.tableFixedX::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tableFlexable {
+    width: calc(100% - var(--fixedXWidth));
+    overflow: scroll;
+    scrollbar-width: 0;
+}
+
+.tableFlexable::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.row {
+    display: flex;
+    width: min-content;
+    height: min-content;
+}
+
+.cell {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-break: break-all;
+    width: calc(var(--cellWidth) - 2px);
+    height: calc(var(--cellHeight) - 2px);
+    border: solid 1px #888;
+    cursor: default;
+    transition: 
+        background-color 0.2s ease-in-out;
+}
+
+/* .columnHover {
+    background-color: #955;
+    transition: 
+        background-color 0.1s ease;
+}
+
+.rowHover {
+    background-color: #595;
+    transition: 
+        background-color 0.1s ease;
+} */
+
+/* .cell:hover, input:hover {
+    background-color: #ddd;
+    transition: 
+        background-color 0.2s ease-in-out;
+} */
+
+.table input {
+    background-color: inherit;
+    transition: inherit;
+}
+
+.table input:focus-visible {
+    background-color: #ddd;
+}
+
+.clickableCell {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.clickableCell:hover {
+    background-color: #aaa;
+}
+
+.cell[id*='r2|'] {
+    --cellHeight: 40px;
+}
+
+.cell[id*='c0|'] {
+    --cellWidth: 40px;
+} 
+
+/* .cell[id*='c1|'] {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.cell[id*='c1|']:hover {
+    background-color: #aaa;
+} */
+
+.cell[id*='c2|'] {
+    --cellWidth: 80px;
+}

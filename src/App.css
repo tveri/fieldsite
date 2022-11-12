@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 0;
+    --navBarHeight: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
+    color: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.page {
+    margin-top: calc(var(--navBarHeight) + 40px);
 }
 
-.App-link {
-  color: #61dafb;
+.dashboardPage {
+    background-color: repeating-linear-gradient(red, yellow 10%, green 20%);;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.uploadModalWindow {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.navBarButton {
+    display: flex;
+    text-decoration: none;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.navBar {
+    display: flex;
+    /* position: fixed; */
+    /* top: 0; */
+    height: var(--navBarHeight);
+    width: calc(100% - 10px);
+    padding: 0 5px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1;
+    box-shadow: 0 0 3px rgba(75, 75, 75, 0.8);
+}
+
+.navBarLeft {
+    display: flex;
+    width: 42vw;
+    gap: 40px;
+}
+
+.navBarCenter {
+    display: flex;
+    align-items: center;
+}
+
+.navBarRight {
+    display: flex;
+    margin-right: 20px;
+}
+
+.navBarField {
+    font-size: 1.2em;
+}
+
+.navBarFieldName {
+    font-weight: 600;
+}
+
+.navBarDate {
+    display: flex;
+    font-weight: 200;
+    font-size: 1.2em;
+}
+
+.navBarDate input {
+    font-weight: 800;
+    width: 100px;
 }

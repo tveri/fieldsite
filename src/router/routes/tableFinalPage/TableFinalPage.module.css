@@ -1,0 +1,170 @@
+.page {
+    /* font-family: sans-serif; */
+    font-size: 0.9em;
+}
+
+.table {
+    --cellWidth: 60px;
+    --cellHeight: 20px;
+    --fixedXWidth: calc(100px + 40px);
+    --fixedYWidth: 120px;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.tableHeaderStyles {
+    display: flex;
+    font-size: 0.9em;
+}
+
+.tableFooterStyles {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* .tableFixedXY {
+
+} */
+
+.tableFixedY {
+    overflow: hidden;
+    scrollbar-width: 0;
+    height: --fixedYWidth;
+}
+
+.tableFixedY::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tableFixedX {
+    width: var(--fixedXWidth);
+    height: calc(100% - var(--fixedYWidth));
+    overflow: hidden;
+    scrollbar-width: 0;
+}
+
+.tableFixedX::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tableFlexable {
+    width: calc(100% - var(--fixedXWidth));
+    height: calc(100% - var(--fixedYWidth));
+    overflow: scroll;
+    scrollbar-width: 0;
+}
+
+.tableFlexable::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.row {
+    display: flex;
+    width: min-content;
+    height: min-content;
+}
+
+.cell {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-break: break-all;
+    width: calc(var(--cellWidth) - 2px);
+    height: calc(var(--cellHeight) - 2px);
+    border: solid 1px #888;
+    cursor: default;
+    transition: 
+        background-color 0.2s ease-in-out;
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+}
+
+/* .columnHover {
+    background-color: #955;
+    transition: 
+        background-color 0.1s ease;
+}
+
+.rowHover {
+    background-color: #595;
+    transition: 
+        background-color 0.1s ease;
+} */
+
+/* .cell:hover, input:hover {
+    background-color: #ddd;
+    transition: 
+        background-color 0.2s ease-in-out;
+} */
+
+.table .cell input {
+    background-color: inherit;
+    transition: inherit;
+}
+
+.table .cell input:focus-visible {
+    background-color: #ddd;
+}
+
+.table *[id*='r0|'] {
+    --cellHeight: 120px;
+}
+
+.table *[id*='c0|'] {
+    --cellWidth: 40px;
+} 
+
+.table *[id*='c1|'] {
+    --cellWidth: 100px;
+} 
+
+.buttonsContainer {
+    position: fixed;
+    top: calc(100% - 60px);
+    left: calc(100% - 180px);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+    border-radius: 50px;
+    background-color: #adadad56;
+    padding: 5px;
+    border: 1px solid #7c7c7c;
+}
+
+.buttonWraper {
+    display: flex;
+
+}
+
+.buttonWraper button, a, Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #7c7c7c;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.buttonWraper button:hover, a:hover, Link:hover {
+    background-color: #adadad;
+    transition: background-color 0.2s ease;
+}
+
+.buttonWraper button img, a img, Link img {
+    width: 22px
+}
